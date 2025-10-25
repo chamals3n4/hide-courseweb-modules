@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Hide Courseweb Modules",
+    "version": "1.0",
+    "description": "Hide unwanted modules from My Courses section on courseweb.sliit.lk",
+    "permissions": [
+        "scripting",
+        "activeTab",
+        "storage"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "Hide Courseweb Modules"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://courseweb.sliit.lk/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ]
+}
